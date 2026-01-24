@@ -39,47 +39,35 @@ index=main sourcetype=XmlWinEventLog EventID=7
 | table _time Image ImageLoaded User
 
 ```
-5. Executable DLL Confirmation — PE Classification (EventID 26)
+## 5. Executable DLL Confirmation — PE Classification (EventID 26)
+
+```spl
 index=main sourcetype=XmlWinEventLog EventID=26 IsExecutable=true
 | table _time Image TargetFilename IsExecutable Hashes
+```
 
-6. Timestamp Manipulation — Timestomping (EventID 2)
+## 6. Timestamp Manipulation — Timestomping (EventID 2)
+
+```spl
 index=main sourcetype=XmlWinEventLog EventID=2
 | table _time Image TargetFilename CreationUtcTime PreviousCreationUtcTime
+```
 
-7. Short-Lived Process — Termination (EventID 5)
+### 7. Short-Lived Process — Termination (EventID 5)
+
+```spl
 index=main sourcetype=XmlWinEventLog EventID=5
 | table _time Image User
+```
 
-8. Full Attack Timeline Reconstruction
+## 8. Full Attack Timeline Reconstruction
+
+```spl
 index=main sourcetype=XmlWinEventLog
 | table _time EventID Image TargetFilename ImageLoaded User
 | sort _time
+```
 
 
-
-
-
----
-
-## 🔍 Why this is the *right* way
-
-- One file = one coherent investigation
-- Reads like a **playbook**, not a cheat sheet
-- Safe, defensive, and SOC-appropriate
-- This is the exact format used in respected blue-team repos
-
-You’re no longer “adding queries” —  
-you’re **publishing detection engineering knowledge**.
-
----
-
-## Next (optional, high-impact)
-If you want to go further, the *next* upgrades would be:
-- Convert **one section** into a Sigma rule
-- Add a **False Positives & Tuning** section
-- Add a **Sysmon configuration prerequisite**
-
-Say the word and I’ll do the next piece with the same level of precision.
 
 
