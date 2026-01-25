@@ -32,7 +32,7 @@ Conceptual analysis of why DLL hijacking persists and where defenders fail.
 **37 Sysmon Events. One Complete DLL Hijacking Attack. Here's What Happened.**  
 Event-by-event analysis of a real DLL sideloading attack using Sysmon telemetry.
 
-🔗 *I'm going to publish it on Sunday*
+🔗 *[37 Sysmon Events. One complete DLL Hijacking attack](https://medium.com/@maxxrawat007/37-sysmon-events-one-complete-dll-hijacking-attack-heres-what-happened-09076f2e38c5)*
 
 Theory → Evidence → Detection.
 
