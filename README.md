@@ -61,6 +61,12 @@ DLL hijacking thrives in environments where module loading is not baselined.
 
 ---
 
+## False Positives
+
+Not all DLL search order anomalies are malicious.
+
+See: [False Positive Analysis](false-positives/README.md)
+
 ## Repository Structure
 
 ```text
@@ -68,3 +74,5 @@ DLL hijacking thrives in environments where module loading is not baselined.
 ├── README.md
 ├── detections/
 │   └── README.md
+├── false-positives/
+|   └── README.md
