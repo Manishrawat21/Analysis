@@ -76,3 +76,23 @@ See: [False Positive Analysis](false-positives/README.md)
 │   └── README.md
 ├── false-positives/
 |   └── README.md
+```
+
+## Open to Collaboration
+
+I'm interested in working with teams and organizations building:
+- Detection engineering frameworks
+- Threat hunting operations
+- SOC scaling and optimization
+- Security research projects
+
+**Remote/Contract roles in detection engineering**
+
+If you're working on hard detection problems, let's talk.
+
+## Connect
+
+- **LinkedIn:** www.linkedin.com/in/manishrawat-soc
+- **Twitter/X:** [link]
+- **Medium:** https://medium.com/@maxxrawat007
+- **Email:** Rawatmanish21@outlook.com (for serious inquiries)
