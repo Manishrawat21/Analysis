@@ -93,6 +93,5 @@ If you're working on hard detection problems, let's talk.
 ## Connect
 
 - **LinkedIn:** www.linkedin.com/in/manishrawat-soc
-- **Twitter/X:** [link]
 - **Medium:** https://medium.com/@maxxrawat007
 - **Email:** Rawatmanish21@outlook.com (for serious inquiries)
