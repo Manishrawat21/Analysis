@@ -1,0 +1,11 @@
+The lab environment is intentionally minimal.
+
+- Single Windows system
+- PowerShell logs forwarded to Splunk
+- ScriptBlock logging enabled
+- No Sysmon
+- No process creation logs (4688 not configured)
+
+This setup mirrors what many non mature environments rely on.
+
+Limitations were documented rather than hidden, as detection logic changes significantly depending on available telemetry.
