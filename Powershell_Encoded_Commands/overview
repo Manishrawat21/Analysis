@@ -1,5 +1,0 @@
-PowerShell encoded commands are not new, but they remain effective because they blend into normal administrative activity.
-
-This analysis focuses on how encoded execution appears in PowerShell logs when tested directly, not how it is described in reports.
-
-The goal was to answer a simple question: what does this really look like in Splunk, and where do simple detections break?
