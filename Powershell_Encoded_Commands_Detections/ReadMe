@@ -1,4 +1,4 @@
-# PowerShell Encoded Command Detection
+# PowerShell Encoded Command Detection 
 
 This repository documents practical detection research around encoded PowerShell execution based on hands on testing in a small Splunk lab.
 
@@ -6,7 +6,7 @@ The goal is not to explain what encoded commands are. The goal is to show how th
 
 This work is based on direct observation rather than theory.
 
-## What this repo covers
+## What this repo covers 
 
 - How encoded PowerShell commands are logged in practice
 - Why simple string matching fails for parameter variations
