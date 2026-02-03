@@ -1,29 +1,99 @@
-# PowerShell Encoded Command Detection — Analysis
+# Detection Engineering Notes and Analysis
 
-This repository collects practical and theoretical research on PowerShell encoded command techniques, detection engineering, and reproducible detection artifacts.
+This repository documents hands on detection research based on lab testing, log analysis, and real SOC workflows.
 
-Maintainer: Manish Rawat — [LinkedIn](https://www.linkedin.com/in/manishrawat-soc/) • [GitHub](https://github.com/Manishrawat21)
+The focus is on how attacker techniques actually appear in logs, what detection logic works in practice, what fails, and where false positives are introduced. All content is written from a defensive perspective for analysts and detection engineers.
 
-Table of contents
+This is not offensive tooling or exploit development.
 
-- [Powershell_Encoded_Commands_Detections](#powershell-encoded-commands-detections)
-- [Docs](#docs)
-- [Contributing](#contributing)
-- [License](#license)
+---
 
-Powershell_Encoded_Commands_Detections
+## What this repository contains
 
-See the Powershell_Encoded_Commands_Detections directory for the hands-on lab, detection queries, Sigma rule, and test cases.
+### DLL Hijacking and Side Loading
 
-Docs
+Analysis and detection notes for DLL hijacking and side loading activity on Windows systems.
 
-- docs/practical.md — Practical lab write-up (Part 2)
-- docs/theory.md — Theoretical background and motivation (Part 1)
+Topics covered:
+- How legitimate executables load malicious DLLs
+- Common execution paths abused during side loading
+- Correlation between process execution, file creation, and image load events
+- Behavior based detection logic instead of file name matching
+- False positives observed during real testing
 
-Contributing
+Common false positives identified:
+- Chrome and Chromium based applications
+- Visual Studio Code
+- Python executions
+- Electron based desktop applications
 
-See CONTRIBUTING.md for how to contribute. If you plan to submit detection changes, include test cases and sample logs.
+The emphasis is on separating expected application behavior from activity that actually warrants investigation.
 
-License
+---
 
-This project is licensed under the MIT License — see LICENSE.
+### PowerShell Encoded Command Detection
+
+Research into how encoded PowerShell commands appear in logs and how attackers evade simple detections.
+
+Includes:
+- ScriptBlock and module logging behavior (4104, 4103, 400, 800)
+- Why parameter obfuscation breaks keyword based detections
+- Splunk queries that failed and why
+- Regex based detection approaches
+- Context driven detections to reduce noise
+- Example Sigma style detection logic built from lab observations
+
+All testing is performed with realistic telemetry rather than ideal enterprise setups.
+
+---
+
+## Detection philosophy
+
+Effective detection is rarely about single indicators.
+
+This repository focuses on:
+- Behavioral correlation over static signatures
+- Understanding how SIEM platforms index and tokenize data
+- Reducing false positives before increasing alert volume
+- Writing detections analysts can realistically investigate
+
+Guiding question:
+Would this detection survive in a real SOC environment?
+
+---
+
+## Who this repository is for
+
+- SOC analysts
+- Detection engineers
+- Threat hunters
+- Blue team practitioners tuning detections
+- Security professionals learning how attacks surface in logs
+
+---
+
+## Support the project
+
+If you find this repository useful or learn something from it, consider giving it a star.  
+It helps the research reach more analysts and encourages continued work.
+
+---
+
+## Connect and follow the work
+
+GitHub  
+https://github.com/Manishrawat21
+
+LinkedIn  
+https://www.linkedin.com/in/manishrawat-soc/
+
+Medium  
+[Detection write ups and lab based research](https://medium.com/@maxxrawat007)  
+
+---
+
+## Notes
+
+All queries and detection logic are starting points and should be adapted to your environment.
+
+This repository evolves as new detection research is added.
