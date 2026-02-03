@@ -115,7 +115,7 @@ Each detection should be tuned against known baseline activity.
 The theoretical background and deeper discussion are documented in a separate Medium article.
 
 - **Theory:** [Why attackers rely on PowerShell encoding and how obfuscation works](https://medium.com/system-weakness/powershell-encoded-commands-why-attackers-love-it-and-how-we-hunt-it-ff680f5c8c35)  
-- **Practice:** What actually appears in logs and how to detect it effectively  
+- **Practice:** [What actually appears in logs and how to detect it effectively](https://medium.com/@maxxrawat007/powershell-encoded-commands-building-detection-rules-that-actually-work-part-2-dc136d1a7b7f)  
 
 ---
 
