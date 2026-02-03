@@ -71,6 +71,16 @@ Would this detection survive in a real SOC environment?
 - Security professionals learning how attacks surface in logs
 
 ---
+## Open to Collaboration
+
+Interested in working with teams on:
+- Detection engineering frameworks
+- Threat hunting operations
+- SOC scaling and optimization
+
+If you're solving hard detection problems, let's talk.
+
+---
 
 ## Support the project
 
