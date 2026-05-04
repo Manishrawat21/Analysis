@@ -1,4 +1,4 @@
-# Splunk Detection Queries — DLL Hijacking Analysis
+# Splunk Detection Queries: DLL Hijacking Analysis
 
 This document contains **investigative Splunk queries** aligned with the DLL hijacking analysis described in the accompanying articles.
 
